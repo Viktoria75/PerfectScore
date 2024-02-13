@@ -368,11 +368,6 @@ document.addEventListener("DOMContentLoaded", function () {
     
         // Get existing games from localStorage
         let storedGames = JSON.parse(localStorage.getItem('games')) || [];
-
-        if (!isGameNameUnique(gameName, storedGames)) {
-            alert('A game with the same name already exists.');
-            return;
-        }
     
         if (gameId) {
             // Find the index of the game to be updated
