@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/icon2.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/product.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <script src="./scripts/nav.js"></script>
+    <script type="module" src="./scripts/product.js"></script>
+    <title>Perfect Score</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <a href='index.html' class="logo"><img src="./images/logo.png" alt="Logo" width="175" height="50"></a>
+            <div class="nav-buttons">
+                <button id="signInBtn" class="signin">Sign In</button>
+                <button id="profileBtn" class="profile">My Profile</button>
+                <button id="signOutBtn" class="signout">Sign Out</button>
+            </div>  
+        </nav>
+    </header>
+    <main>
+        <div class="product-details">
+            <section id="product-details" class="game-credentials">
+                <!-- Display game details here -->
+            </section>
+            <section class="reviews-window">
+                <div class="title-wrapper">
+                    <h3>Reviews:</h3>
+                    <p id="create-review" class="create-review"><i class="fa fa-plus"></i> Review this title</p>
+                </div>
+                <div id="reviews" class="reviews">
+                    <div class="review">
+                        <p class="review-author"></p>
+                        <p class="review-title"></p>
+                        <p class="review-rating"></p>
+                        <p class="review-text"></p>
+                    </div>
+                </div>
+            </section>
+            <section id="reviewFormPopup" class="review-form-popup">
+                <form id="reviewForm">
+                    <label for="rating">Your Rating:</label>
+                    <input type="number" id="rating" name="rating" min="1" max="10" required>
+
+                    <label for="reviewTitle">Review Title:</label>
+                    <textarea id="reviewTitle" name="reviewTitle" class="review-form-title" rows="1" required></textarea>
+                
+                    <label for="reviewText">Your Review:</label>
+                    <textarea id="reviewText" name="reviewText" class="review-form-text" rows="4" required></textarea>
+
+                    <div class="form-buttons">
+                        <button type="submit">Submit</button>
+                        <button type="button" id="closeFormBtn">Close</button>
+                    </div>
+                </form>
+            </section>
+            <section id="commentFormPopup" class="comment-form-popup">
+                <form id="commentForm">
+                    <label for="commentText">Your comment:</label>
+                    <textarea id="commentText" name="commentText" class="comment-form-text" rows="4" required></textarea>
+
+                    <div class="form-buttons">
+                        <button type="submit">Submit</button>
+                        <button type="button" id="closeCommentFormBtn">Close</button>
+                    </div>
+                </form>
+            </section>
+            <section id="warningPopup" class="warning-popup">
+                <span class="warning-text">You need to be signed in to review games.</span>
+            </section>
+        </div>
+        <div class="overlay" id="overlay"></div>
+    </main>
+    <footer class="footer">
+        <p>©2024 by Viktoria Cholakova, Perfect Score Inc., All rights reserved. </p>
+        <address class="contact">
+            Contact: <a href="viktoria.03.ch@gmail.com">viktoria.03.ch@gmail.com</a>
+        </address>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,172 @@
+/* body of the website */
+
+main{
+    margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+.header{
+    width:1920px;
+    height:550px;
+}
+
+
+h1{
+    padding:1rem;
+}
+
+.games-container{
+    margin:2rem;
+}
+
+.articles-container{
+    margin:2rem;
+}
+
+/* game card css */
+
+.games{
+    display:flex;
+    flex-wrap:wrap;
+    margin-left:1rem;
+}
+
+.game{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    background-color:var(--darkblue);
+    border-radius: 8px;
+    margin-right:1rem;
+    margin-top:1rem;
+    max-width:175px;
+    justify-content: space-between;
+}
+
+.game-image{
+    border-radius: 8px;
+    cursor:pointer;
+}
+
+.game-rating{
+    margin:2px;
+}
+
+.game-title{
+    margin:9px;
+    margin-bottom:5px;
+    min-height:35px;
+}
+
+.game-date{
+    font-size:13px;
+    margin:5px;
+}
+
+/* article card css */
+
+
+.article{
+    display:flex;
+    flex-direction:row;
+    border-radius: 8px;
+    background:var(--darkblue);
+    margin-bottom:1rem;
+    margin-left:1rem;
+    
+}
+
+.articles{
+    display:flex;
+    flex-wrap:wrap;
+    margin-left:1rem;
+}
+
+.article-image{
+    border-radius: 8px;
+    min-height:120px;
+}
+
+
+
+.article-text{
+    max-width: 25rem;
+}
+
+.article-text .article-title{
+    font-size:17px;
+}
+
+.article-text p{
+    margin:1rem;
+    margin-bottom:0.5rem;
+    font-size:12px;
+}
+
+.captions-wrapper{
+    display:flex;
+}
+
+.sort-review-button{
+    background:var(--darkblue);
+    border-radius:6px;
+    color:white;
+    width:8rem;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+
+.header {
+    width: 100%; 
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .article {
+        display: flex;
+        flex-direction: column;
+        width:60%;
+        border-radius: 8px;
+        background: var(--darkblue);
+        margin-bottom: 1rem;
+    }
+    
+    .article-image {
+        border-radius: 8px;
+        width: 100%; 
+        height: 60%; 
+    }
+    
+    .article-text {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    
+
+    .article {
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        background: var(--darkblue);
+        margin-bottom: 1rem;
+    }
+    
+    .article-image {
+        border-radius: 8px;
+        width: 100%;
+        height: auto; 
+    }
+    
+    .article-text {
+        max-width: 100%;
+    }
+}

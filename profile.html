@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/icon2.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/profile.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <script src="./scripts/nav.js"></script>
+    <script src="./scripts/profile.js"></script>
+    <title>Perfect Score</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <a href='index.html' class="logo"><img src="./images/logo.png" alt="Logo" width="175" height="50"></a>
+            <div class="nav-buttons">
+                <button id="signInBtn" class="signin">Sign In</button>
+                <button id="profileBtn" class="profile">My Profile</button>
+                <button id="signOutBtn" class="signout">Sign Out</button>
+            </div>  
+        </nav>
+    </header>
+    <main>
+        <section class="profile-window">
+            <div class="credentials">
+                <img class="avatar" src="./images/avatar.webp" alt="Profile Picture" width="150" height="150">
+                <div class="user-data">
+                    <h2 id="user-username" class="user-username"></h2>
+                    <span>Email:</span>
+                    <span id="user-email" class="user-email"></span>
+                    <div class="password-space">
+                        <span>Password:</span>
+                        <span id="user-password" class="user-password"></span>
+                        <button id="show-password">Show</button>
+                    </div>
+                </div>
+            </div>
+            <div class="user-games-reviews">
+                <div class="reviews-section">
+                    <span class="review-section-title">Your Reviews:</span>
+                    <div id="user-profile-reviews">
+                        <!-- User reviews will be displayed here -->
+                    </div>
+                </div>
+                <section class="games-section">
+                    <div class="game-section-captions">
+                        <span class="game-section-title">Your Games:</span>
+                        <span id="gameAddBtn" class="game-add-button"><i class="fa fa-plus-circle"></i> Add a Game</span>
+                    </div>
+                    <div id="user-profile-games" class="user-profile-games">
+                        <!-- User games will be displayed here -->
+                        <div class="game">
+                            <img class="game-image" src="https://m.media-amazon.com/images/M/MV5BNGQyYmRkZTgtN2Q1MS00MDllLTg5ZmItNDgyMzczNjVlYWVhXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_.jpg" alt="game image">
+                            <span class="game-title">The Last Of Us</span>
+                            <span id="editGameBtn" class="edit-game-button">Edit</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="gameFormPopup" class="game-form-popup">
+                <div class="form-content">
+                    <span id="closeFormBtn" class="close-form-button">&times;</span>
+                    <form id="gameForm">
+                        <input type="hidden" id="gameId" value="">
+                        <label for="gameName">Game Name:</label>
+                        <input type="text" id="gameName" required>
+
+                        <label for="gameImage">Game Image URL:</label>
+                        <input type="text" id="gameImage">
+
+                        <label for="gameDesc">Game Description:</label>
+                        <input type="text" id="gameDesc" class="gameDesc" required>
+
+                        <button type="submit" id="submitGameBtn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="editFormPopup" class="edit-form-popup">
+                <div class="edit-content">
+                    <span id="closeEditBtn" class="close-edit-button">&times;</span>
+                    <form id="editForm">
+                        <input type="hidden" id="editgameId" value="">
+                        <label for="gameName">Game Name:</label>
+                        <input type="text" id="editgameName" required>
+
+                        <label for="gameImage">Game Image URL:</label>
+                        <input type="text" id="editgameImage">
+
+                        <label for="gameDesc">Game Description:</label>
+                        <input type="text" id="editgameDesc" class="gameDesc" required>
+
+                        <button type="submit" id="submitEditBtn">Submit</button>
+                        <button id="removeGameBtn">Delete This Game</button>
+                    </form>
+                </div>
+            </div>
+            <div class="overlay" id="overlay"></div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>©2024 by Viktoria Cholakova, Perfect Score Inc., All rights reserved. </p>
+        <address class="contact">
+            Contact: <a href="viktoria.03.ch@gmail.com">viktoria.03.ch@gmail.com</a>
+        </address>
+    </footer>
+</body>
+</html>

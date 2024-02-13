@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./images/icon2.png" type="image/x-icon"/>
+  <title>Register</title>
+  <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/register.css">
+  <script src="./scripts/nav.js"></script>
+  <script src="./scripts/register.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <a href='index.html' class="logo"><img src="./images/logo.png" alt="Logo" width="175" height="50"></a>
+            <div class="nav-buttons">
+                <button id="signInBtn" class="signin">Sign In</button>
+                <button id="profileBtn" class="profile">My Profile</button>
+                <button id="signOutBtn" class="signout">Sign Out</button>
+            </div>  
+        </nav>
+    </header>
+    <main class="main">
+    <section class="register-window">
+        <span class="register-error"></span>
+        <form action="#" id="registerForm" class="login-form">
+        <input type="text" id="registerUsername" class="register-username" name="username" placeholder="Username">
+        <input type="text" id="registerEmail" class="register-email" name="email" placeholder="Email">
+        <input type="password" id="registerPassword" class="register-password" name="email" placeholder="Password">
+        <input type="password" id="repeatPassword" class="repeat-password" name="repeat-email" placeholder="Repeat Password">
+        <button type="submit" class="register-btn">Sign In</button>
+        </form>
+    </section>
+    </main>
+    <footer class="footer">
+        <p>©2024 by Viktoria Cholakova, Perfect Score Inc., All rights reserved. </p>
+        <address class="contact">
+            Contact: <a href="viktoria.03.ch@gmail.com">viktoria.03.ch@gmail.com</a>
+        </address>
+    </footer>
+</body>
+</html>
