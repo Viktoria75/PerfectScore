@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log(`Sorted Games by ${currentSortCriteria}:`, sortedGames);
 
                 // Render the sorted games
-                renderGameCards(sortedGames, (currentSortCriteria === 'reviews') ? 'game-rating' : 'reviews');
+                renderGameCards(sortedGames, currentSortCriteria);
             })
             .catch(error => console.error('Error fetching JSON:', error));
     }
