@@ -416,8 +416,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     const commentForm = document.getElementById('commentForm');
                     const commentText = document.getElementById('commentText');
 
-                    commentFormPopup.style.display = 'block';
-                    overlay.style.display = 'block';
+                     if(loggedStatus){
+                        commentFormPopup.style.display = 'block';
+                        overlay.style.display = 'block';
+                     }
 
                     closeCommentFormBtn.addEventListener('click', function () {
                         commentFormPopup.style.display = 'none';
